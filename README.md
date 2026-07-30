@@ -1,47 +1,60 @@
-# Equity-Researcher Model
+# AdaptMarket
 
-> A public progress showcase for an AutoScientist Challenge 2026 submission in **Market Analysis & News**. This repository contains documentation only: no source documents, datasets, model weights, credentials, prompts, evaluation examples, or proprietary pipeline code.
+> Evidence-grounded equity research from dated company and market briefs.
 
-## The project
+AdaptMarket is a full supervised fine-tune of `mistralai/Mixtral-8x7B-Instruct-v0.1` for the **Market Analysis & News — Equity Analysis** track of the AutoScientist Challenge 2026. It produces concise analyst-style research that links financial evidence to operating performance, valuation, catalysts, and risks while distinguishing reported results from forward-looking guidance.
 
-The Equity-Researcher Model is a supervised fine-tuning experiment for producing concise, analyst-style market research from dated company or market briefs. The intended output connects financial evidence to business performance, valuation, catalysts, and risks, while separating reported facts from forward-looking guidance.
+This is a public research showcase. It contains experiment documentation and reported metrics only. It does not contain source documents, training data, model weights, prompts, credentials, or unpublished evaluation artifacts.
 
-The goal is not to generate investment advice, price targets, or generic buy/sell answers. It is to support a research workflow with a first-pass analysis that identifies material changes, evidence gaps, and uncertainty.
+## Headline results
 
-## Latest experiment
+| Evaluation | Base | AdaptMarket | Change |
+| --- | ---: | ---: | ---: |
+| On-dataset win rate | 15% | **85%** | **+70 percentage points** |
+| Market Analysis win rate | 27% | **73%** | **+46 percentage points** |
+
+The full fine-tune improved both platform-reported evaluations. The target-domain result remained strong while the broader Market Analysis score rose to 73%.
+
+## Experiment
 
 | Field | Value |
 | --- | --- |
-| Track | Market Analysis & News — Equity Analysis |
 | Date | 30 July 2026 |
 | Base model | `mistralai/Mixtral-8x7B-Instruct-v0.1` |
-| Method | Full-model supervised fine-tuning (SFT) through AutoScientist by Adaption Labs |
+| Method | Full-model supervised fine-tuning through AutoScientist by Adaption Labs |
 | Data format | Chat |
 | Epochs | 1 |
 | Training experiment | `e7becda4-f659-4704-b2f8-67f76a029e52` |
 | Fine-tune job | `5b1fe1bb-c695-4bfd-bb05-eb24335634e0` |
-| Platform model name | `adaption_mixtral_8x7b_instruc_equity_analysis_large_e7becda4` |
 
-Full fine-tuning replaced LoRA in this run. The objective was to retain strong task-specific behavior while improving transfer to the broader Market Analysis evaluation.
+[Full experiment record and reporting limits](docs/RESULTS.md)
 
-## Results
+## What AdaptMarket does
 
-| Evaluation | Base | Adapted | Change |
-| --- | ---: | ---: | ---: |
-| On-dataset win rate | 15% | **85%** | **+70 points** |
-| Market Analysis win rate | 27% | **73%** | **+46 points** |
+Given a dated company or market brief, the model is intended to:
 
-The adapted model outperformed the base model on both platform-reported evaluations. The results indicate a strong target-domain gain with improved performance on the broader Market Analysis domain.
+- separate reported facts from guidance, forecasts, and opinion;
+- connect evidence to business performance and valuation;
+- surface catalysts, risks, uncertainty, and missing evidence;
+- produce a concise first-pass research view rather than generic sentiment or a buy/sell instruction.
 
-See [results and reporting limits](docs/results.md) for interpretation and disclosure boundaries.
+[Methods](docs/METHODS.md) · [Roadmap](docs/ROADMAP.md)
 
-## Dataset strategy
+## Repository layout
 
-The training material is grounded in institutional-style equity research and market-analysis documents. It covers company performance, valuation, sector developments, macroeconomic changes, catalysts, risks, and outlooks.
-
-The aim is to teach evidence-grounded research writing rather than synthetic recommendations. Source documents and derived training data are not redistributed through this repository.
-
-See [methodology](docs/methodology.md).
+```text
+.
+├── data/                 # intentionally empty; no data is published here
+├── docs/
+│   ├── METHODS.md        # task, training configuration, data boundaries
+│   ├── RESULTS.md        # platform-reported results and interpretation
+│   ├── ROADMAP.md        # market-intelligence research direction
+│   ├── REPRODUCE.md      # public reproducibility boundary
+│   └── PUBLIC_RELEASE_POLICY.md
+├── model_card/           # placeholder for a release-eligible future model card
+├── results/              # placeholder for cleared future result artifacts
+└── README.md
+```
 
 ## Artifacts
 
@@ -52,20 +65,14 @@ See [methodology](docs/methodology.md).
 | Interactive Base-vs-Fine-Tuned Arena | [DEMO_LINK] |
 | Repository | [REPOSITORY_LINK] |
 
-## Roadmap
+Links remain placeholders until the corresponding artifact is approved for public release.
 
-The next stage expands from isolated company analysis toward thesis-conditioned, cross-company, and cross-sector impact reasoning:
+## Data availability
 
-1. Expand the market-research corpus across macroeconomics, industries, commodities, rates, currencies, credit, policy, company earnings, valuation, and timestamped news.
-2. Connect company research into a market knowledge network spanning businesses, products, suppliers, customers, competitors, industries, and macro factors.
-3. Model direct and higher-order cross-sector spillovers.
-4. Evaluate new events against the existing investment thesis, not as isolated headlines.
-5. Build a point-in-time market evidence graph to preserve temporal context and reduce leakage.
+No training or evaluation data is included in this repository. The underlying material and derived records remain restricted. Any future public release requires provenance, licensing, redistribution, privacy, security, leakage, and reproducibility review.
 
-See the [detailed roadmap](docs/roadmap.md).
+## Limitations
 
-## Public-release boundary
+The reported win rates are platform-reported comparative evaluation metrics. They are not investment-return metrics and do not establish real-world financial performance, independent human validation, or generalization beyond the reported evaluations.
 
-This is a documentation-only showcase. It excludes restricted source text, private datasets, model weights, credentials, internal prompts, local paths, and unpublished implementation artifacts.
-
-The model is a research prototype. Its outputs are not financial, investment, tax, or legal advice, and should not be used as the sole basis for investment decisions.
+AdaptMarket is a research prototype. It is not financial, investment, tax, or legal advice and should not be used as the sole basis for investment decisions.
