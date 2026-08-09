@@ -1,5 +1,15 @@
 # Roadmap
 
+## Delivered foundation
+
+The public record now covers three completed training experiments:
+
+- Attempt #1 established the answer-first extraction workflow, expanded 589 training rows through Adaptive Data, and recorded both on-dataset and broader Market Analysis preference results.
+- Attempt #2 scaled the source corpus and combined three enhancement variants into 45,758 rows, then trained and released a Llama 4 Scout LoRA adapter.
+- AdaptMarket moved to full-model supervised fine-tuning of Mixtral 8x7B and recorded 85-to-15 on-dataset and 73-to-27 Market Analysis preference results.
+
+The predecessor datasets and adapters are public. The current AdaptMarket corpus and model remain restricted pending release review. See [Experiment History](EXPERIMENT_HISTORY.md).
+
 ## 1. Expand the market-research corpus
 
 Extend coverage across macroeconomics, monetary policy, industry supply and demand, commodities, input costs, interest rates, currencies, credit conditions, regulation, sector outlooks, company earnings, valuation, and timestamped market news.
@@ -31,6 +41,16 @@ The intended output separately evaluates fundamental, thesis, valuation, market,
 ## 5. Preserve point-in-time evidence
 
 Link conclusions to timestamped evidence so the system can reconstruct what was known on a specific date. The target evidence graph joins claims, source documents, exposures, assumptions, market events, supporting evidence, conflicting evidence, and subsequent thesis revisions.
+
+## Release and evaluation work
+
+Before claiming reproducibility or production readiness:
+
+1. clear a release-eligible current dataset and source-rights record;
+2. freeze the evaluation definition and evaluator configuration;
+3. publish base and adapted outputs, error analysis, and uncertainty reporting;
+4. run independent human review across time periods, markets, and source types;
+5. evaluate the system as a research workflow rather than an investment-return engine.
 
 ## Long-term objective
 
