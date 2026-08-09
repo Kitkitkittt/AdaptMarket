@@ -1,5 +1,13 @@
 # Results Artifacts
 
-This directory is reserved for future public result artifacts that have completed reproducibility and release review.
+This directory indexes aggregate results and public figures across the three experiments.
 
-Current platform-reported metrics are documented in [docs/RESULTS.md](../docs/RESULTS.md). No per-example outputs, evaluator records, or restricted artifacts are published here.
+- Current AdaptMarket aggregate metrics: [docs/RESULTS.md](../docs/RESULTS.md)
+- Three-stage narrative and methods: [docs/EXPERIMENT_HISTORY.md](../docs/EXPERIMENT_HISTORY.md)
+- Public image checksums and captions: [FIGURE_INDEX.md](FIGURE_INDEX.md)
+
+## Release boundary
+
+Attempts #1 and #2 include figures already published by the companion write-up. AdaptMarket currently has aggregate platform-reported metrics only.
+
+No per-example AdaptMarket outputs, evaluator records, restricted data, prompts, or weights are published in this directory. No result graphic has been invented for the current experiment.

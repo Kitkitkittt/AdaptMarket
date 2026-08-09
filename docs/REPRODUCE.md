@@ -1,28 +1,38 @@
 # Reproduction and Data Availability
 
-## Public repository scope
+## Current AdaptMarket experiment
 
-This repository intentionally contains no source documents, training examples, evaluation examples, model weights, prompts, credentials, private infrastructure, or unpublished outputs.
+This repository does not contain the current experiment's source documents, training examples, evaluation examples, model weights, prompts, credentials, private infrastructure, or unpublished outputs.
 
-The `data/` directory is deliberately empty. It is reserved for future artifacts that are explicitly cleared for public release.
+The current full fine-tune cannot be reproduced from this public repository.
 
-## What can be checked now
+### What can be checked
 
 The public record includes:
 
 - the base model and training configuration;
 - the experiment and fine-tune job identifiers;
-- platform-reported base and adapted win rates;
+- platform-reported base and adapted preference rates;
 - methodology, limitations, and planned research direction.
 
-## What is required for full reproduction
+### What full reproduction requires
 
-A future complete reproduction package requires:
+1. A release-eligible dataset and source-rights record.
+2. A frozen evaluation definition and evaluator configuration.
+3. Base and adapted outputs for the reported evaluation.
+4. Error analysis, uncertainty reporting, and release hashes.
+5. Clearance to publish every included artifact.
 
-1. a release-eligible dataset and source-rights record;
-2. a frozen evaluation definition and evaluator configuration;
-3. base and adapted outputs for the reported evaluation;
-4. error analysis, uncertainty reporting, and release hashes;
-5. clearance to publish every included artifact.
+## Predecessor experiments
 
-Artifacts will be linked from the README only after those conditions are met.
+Attempts #1 and #2 have externally released datasets and LoRA adapters. Their links are catalogued in [data/README.md](../data/README.md) and [model_card/README.md](../model_card/README.md).
+
+Those releases support partial inspection and reuse under their host-page terms, but they do not provide complete reproduction of every reported result. Exact source-document provenance, the full AutoScientist runtime, frozen evaluator configuration, and all per-example evaluation outputs are not published here.
+
+The predecessor releases also do not reproduce AdaptMarket: the current experiment uses a different base model and full-model fine-tuning.
+
+## Figures
+
+The figures in `assets/` are copies of images already published by the [companion write-up](https://adaptions-writeup.vercel.app/). They document predecessor workflow and aggregate results; they are not new evaluation evidence and do not contain the current restricted corpus.
+
+Artifacts for the current experiment will be linked only after the conditions above are met.

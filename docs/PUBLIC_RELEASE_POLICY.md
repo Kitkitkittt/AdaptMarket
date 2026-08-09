@@ -1,26 +1,35 @@
 # Public Release Policy
 
-This repository is intentionally documentation-only.
+This repository is a public documentation and figure archive. It does not publish the current AdaptMarket corpus or model.
 
 ## Included
 
-- project overview;
-- high-level methodology;
-- platform-reported experiment results;
-- roadmap and research direction;
-- placeholders for future public artifacts.
+- project overview and three-experiment history;
+- high-level and current training methodology;
+- platform-reported aggregate experiment results;
+- figures already published by the companion write-up;
+- links to externally hosted predecessor datasets and LoRA adapters;
+- roadmap, limitations, and reproducibility boundaries.
 
-## Excluded
+## Current AdaptMarket exclusions
 
 - third-party research documents and source text;
 - private or restricted datasets, records, metadata, and provenance details;
 - model weights and model access credentials;
-- API keys, tokens, environment files, prompts, local paths, run infrastructure, and operational logs;
-- unpublished evaluation examples, outputs, and internal implementation code.
+- prompts, API keys, tokens, environment files, local paths, run infrastructure, and operational logs;
+- unpublished evaluation examples, outputs, evaluator records, and internal implementation code.
+
+## Predecessor artifacts
+
+Attempts #1 and #2 have public datasets and LoRA adapters hosted on Hugging Face and Kaggle. They are linked for historical completeness and must not be represented as the current AdaptMarket data or weights. Their host pages define access and license terms.
+
+## Figures and attribution
+
+The files in `assets/` mirror the MIT-licensed companion report at https://adaptions-writeup.vercel.app/. The supplied companion checkout records their source paths and revision; [assets/README.md](../assets/README.md) records that context and the checksums verified against the live deployment. Screenshots may contain third-party product interfaces or marks; inclusion documents the published experiment record and does not transfer ownership of those interfaces or marks.
 
 ## Release conditions
 
-Any future dataset, model, or evaluation release requires review of source terms, redistribution rights, privacy, security, attribution, temporal leakage, and reproducibility. A public link is added only after its artifact is cleared for release.
+Any future current-experiment dataset, model, prompt, or evaluation release requires review of source terms, redistribution rights, privacy, security, attribution, temporal leakage, and reproducibility. A public link is added only after its artifact is cleared for release.
 
 ## Use limitation
 
