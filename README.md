@@ -6,6 +6,8 @@ AdaptMarket is a full supervised fine-tune of `mistralai/Mixtral-8x7B-Instruct-v
 
 This is a public research showcase. It contains experiment documentation and reported metrics only. It does not contain source documents, training data, model weights, prompts, credentials, or unpublished evaluation artifacts.
 
+For documentation work, see the [offline review of the public experiment record](SWARM_READY.md#offline-documentation-review).
+
 ## Headline results
 
 | Evaluation | Base | AdaptMarket | Change |

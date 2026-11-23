@@ -41,7 +41,11 @@ The base above is an inspection snapshot, not a permanent working branch. Refres
 
 ## Verification starting point
 
-No executable acceptance command was established by this bounded source inspection. Read `README.md` and record the narrowest existing check before implementation. Do not invent a `test` command or infer that the repository has no tests from this gap. For a documentation-only task, check links, factual source anchors and whitespace; do not build unrelated application code.
+### Offline documentation review
+
+This checkout supports checking the public record, not reproducing the experiment. The [reproduction notes](docs/REPRODUCE.md#public-repository-scope) explain why the data, evaluation material, and weights are absent.
+
+For a documentation change, resolve the edited local links and check the diff for whitespace errors. Compare the two [headline win-rate rows](README.md#headline-results) with the [platform-reported evaluation](docs/RESULTS.md#platform-reported-evaluation), including the percentage-point changes. Matching rows confirm consistent reporting, not an independent evaluation. Keep artifact links subject to the [public release conditions](docs/PUBLIC_RELEASE_POLICY.md#release-conditions).
 
 ## Required handoff result
 
